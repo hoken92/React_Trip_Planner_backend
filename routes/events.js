@@ -10,7 +10,6 @@ router.get("/", async (req, res, next) => {
   } catch (err) {
     res.send(err).status(400);
   }
-  res.status(200).send("Welcome to Events");
 });
 
 export default router;
