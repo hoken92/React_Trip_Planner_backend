@@ -45,4 +45,13 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
+router.delete("/:id", async (req, res, next) => {
+  try {
+    const deletedTrip = await Trip.findByIdAndDelete(req.params.id);
+    res.status(200).send(deletedTrip);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+});
+
 export default router;
