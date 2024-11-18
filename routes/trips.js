@@ -23,4 +23,15 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.post("/", async (req, res, next) => {
+  try {
+    const newTrip = new Trip(req.body);
+    await newTrip.save();
+
+    res.status(200).send(newTrip);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+});
+
 export default router;
