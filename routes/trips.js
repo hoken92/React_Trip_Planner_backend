@@ -34,4 +34,15 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+router.put("/:id", async (req, res, next) => {
+  try {
+    const updatedTrip = await Trip.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.status(200).send(updatedTrip);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+});
+
 export default router;

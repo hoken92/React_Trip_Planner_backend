@@ -35,6 +35,7 @@ const tripSchema = new Schema({
   },
   created_at: {
     type: Date,
+    immutable: true,
     default: () => Date.now(),
   },
 });
