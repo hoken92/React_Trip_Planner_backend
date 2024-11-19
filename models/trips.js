@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 
+// Schema for Trips
 const tripSchema = new Schema({
   name: {
     type: String,

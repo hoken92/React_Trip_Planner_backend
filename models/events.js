@@ -12,6 +12,7 @@ const pointSchema = new Schema({
   },
 });
 
+// Schema for Events
 const eventSchema = new Schema({
   event_name: {
     type: String,
