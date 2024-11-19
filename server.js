@@ -5,6 +5,7 @@ import cors from "cors";
 import connect from "../backend/db/connect.js";
 import tripRouter from "./routes/trips.js";
 import eventRouter from "./routes/events.js";
+import flightRouter from "./routes/flights.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +22,7 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/api/events", eventRouter);
+app.use("/api/flights", flightRouter);
 app.use("/api/trips", tripRouter);
 
 // Error handling
