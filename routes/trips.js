@@ -3,6 +3,8 @@ import Trip from "../models/trips.js";
 
 const router = express.Router();
 
+// GET /api/trips/:id
+// Retrieve a trip by ID
 router.get("/:id", async (req, res) => {
   try {
     const query = { _id: req.params.id };
@@ -14,6 +16,8 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// GET /api/trips
+// Retrieve all Trips
 router.get("/", async (req, res, next) => {
   try {
     const trips = await Trip.find();
@@ -23,6 +27,8 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+// POST /api/trips
+// Create a trip
 router.post("/", async (req, res, next) => {
   try {
     const newTrip = new Trip(req.body);
@@ -34,6 +40,8 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+// PUT/PATCH /api/trips
+// Update a Trip by ID
 router.put("/:id", async (req, res, next) => {
   try {
     const updatedTrip = await Trip.findByIdAndUpdate(req.params.id, req.body, {
@@ -45,6 +53,8 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
+// DELETE /api/trips
+// Delete a Trip by ID
 router.delete("/:id", async (req, res, next) => {
   try {
     const deletedTrip = await Trip.findByIdAndDelete(req.params.id);

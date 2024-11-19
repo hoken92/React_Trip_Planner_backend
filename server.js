@@ -20,8 +20,8 @@ app.get("/", async (req, res) => {
   res.send("Welcome to your Planner!");
 });
 
-app.use("/events", eventRouter);
-app.use("/trips", tripRouter);
+app.use("/api/events", eventRouter);
+app.use("/api/trips", tripRouter);
 
 // Error handling
 app.get((error, req, res, next) => {
