@@ -10,20 +10,13 @@ const router = express.Router();
  */
 router.get("/", async (req, res, next) => {
   try {
-    // If req.query is empty, return an error
-    if (!req.query) {
-      res.status(400).send("Query cannot be empty.");
-      return;
-    }
-
     // Initializes a new Bearer token everytime this route is called
     const amadeus = new Amadeus({
       clientId: process.env.APIKEY,
       clientSecret: process.env.APISECRET,
     });
 
-    const data = await amadeus.shopping.flightOffersSearch.get(req.query);
-
+    const data = await amadeus.shopping.hotelsByCity.get(req.query);
     res.status(200).json(data);
   } catch (err) {
     res.status(400).send(err);
