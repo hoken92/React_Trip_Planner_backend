@@ -23,6 +23,7 @@ const eventSchema = new Schema({
       type: String,
       required: true,
     },
+    cityCode: String,
     geolocation: {
       type: pointSchema,
       required: true,
