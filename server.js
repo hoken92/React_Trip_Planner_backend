@@ -2,14 +2,14 @@ import express from "express";
 import "dotenv/config";
 import morgan from "morgan";
 import cors from "cors";
-import connect from "../backend/db/connect.js";
+import connect from "./db/connect.js";
 import tripRouter from "./routes/trips.js";
 import eventRouter from "./routes/events.js";
 import flightRouter from "./routes/flights.js";
 // import hotelRouter from "./routes/hotels.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 connect();
 
 // Middleware
