@@ -6,20 +6,24 @@ const tripSchema = new Schema({
     type: String,
     required: true,
   },
-  date: {
-    type: Date,
-  },
   event_info: {
     name: String,
     location: String,
     event_start_date: Date,
     event_end_date: Date,
   },
-  flight_info: {
+  depart_flight_info: {
     origin: String,
     destination: String,
     departureDate: Date,
-    returnDate: Date,
+    arriveDate: Date,
+    price: Number,
+  },
+  return_flight_info: {
+    origin: String,
+    destination: String,
+    departureDate: Date,
+    arriveDate: Date,
     price: Number,
   },
   hotel_info: {

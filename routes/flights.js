@@ -45,7 +45,7 @@ router.get("/", async (req, res, next) => {
     // }
 
     // Response from Amadeus API
-    const response = await amadeus.shopping.flightOffersSearch.get(req.body);
+    const response = await amadeus.shopping.flightOffersSearch.get(req.query);
     // results.results = response.data.slice(startIndex, endIndex);
 
     res.status(200).json(response.data);
