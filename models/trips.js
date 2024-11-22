@@ -9,8 +9,8 @@ const tripSchema = new Schema({
   event_info: {
     name: String,
     location: String,
-    event_start_date: Date,
-    event_end_date: Date,
+    start_date: Date,
+    end_date: Date,
   },
   depart_flight_info: {
     origin: String,
