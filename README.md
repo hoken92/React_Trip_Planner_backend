@@ -79,7 +79,7 @@
 ## About The Project
 
 [Trip Planner]()
-<img src="./src/assets/image.png" alt="website image" />
+<img src="./assets/image.png" alt="website image" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,7 +156,7 @@ See the [open issues](https://github.com/hoken92/React_Trip_Planner_frontend/iss
 ### Top contributors:
 
 <a href="https://github.com/hoken92/React_Trip_Planner_frontend/graphs/contributors">
-  <img src="./src/assets/Additions over time.png" alt="contributors image" />
+  <img src="./assets/Additions over time.png" alt="contributors image" />
 </a>
 
 <!-- LICENSE -->
